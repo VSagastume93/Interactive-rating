@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsla(216, 12%, 54%, 0.089);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Overpass:wght@400;700&display=swap');
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+}
+
+.card{
+    margin: 30px;
+    padding: 30px;
+    width: 450px;
+    height: 450px;
+    border-radius: 25px;
+    /* background-color: var(--Dark-Blue); */
+    background: radial-gradient(circle at top, var(--Dark-Blue)0%, #181D23 100%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card .star{
+    margin-bottom: 30px;
+}
+
+.card .star .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--Medium-Grey);
+    /* position: relative;
+    left: 30px;
+    top: 30px; */
+    border-radius: 100%;
+}
+
+.card .star .icon img{
+    width: 20px;
+    height: 20px;
+}
+
+.card h1{
+    color: white;
+    font-weight: 400;
+}
+
+.card h2{
+    color: var(--Light-Grey);
+    font-size: 17px;
+    font-weight: lighter;
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+.card .rate{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .rate button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--Medium-Grey);
+    border-radius: 100%;
+    color: var(--Light-Grey);
+    font-weight: lighter;
+    font-size: 17px;
+    border: none;
+}
+
+.card .submit{
+    margin-top: 30px;
+    height: 60px;
+    background-color: var(--Orange);
+    border-radius:50px;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 15px;
+    border: none;
+}
+
+.card .rate button:hover{
+    background-color: var(--Light-Grey);
+    color: var(--White);
+    transition: 1s;
+}
+
+.card .rate button:focus{
+    background-color: var(--Orange);
+    color: var(--White);
+}
+
+.card .submit:hover{
+    background-color: var(--White);
+    color: var(--Orange);
+    transition: 0.5s;
+}
+
+/** pag2 **/
+
+.container-response{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-response{
+    margin: 30px;
+    padding: 30px;
+    width: 450px;
+    height: 450px;
+    border-radius: 25px;
+    /* background-color: var(--Dark-Blue); */
+    background: radial-gradient(circle at top, var(--Dark-Blue)0%, #181D23 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.card-response .picture{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-response .picture img{
+    width: 150px;
+}
+
+.card-response .selected{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    background-color: var(--Dark-Blue);
+    margin-top: 20px;
+    border-radius: 20px;
+
+}
+
+.card-response .selected h2{
+    margin: auto;
+    color: var(--Orange);
+}
+
+.card-response h2{
+    color: var(--Light-Grey);
+    font-size: 17px;
+    font-weight: lighter;
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+.card-response .text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.card-response .text-container h1{
+    color: white;
+    font-weight: 300;
+    margin-top: 40px;
+    
+}
+
+.card-response .text-container h3{
+    color: var(--Light-Grey);
+    font-weight: 300;
+    text-align: center;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
