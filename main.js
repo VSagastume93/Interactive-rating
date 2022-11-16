@@ -5,10 +5,13 @@ const number2 = document.getElementById("2");
 const number3 = document.getElementById("3");
 const number4 = document.getElementById("4");
 const number5 = document.getElementById("5");
-let eleccion = 1;
+let eleccion = 0;
 const calificación = document.getElementById("calificacion");
 
 function eventoclick() {
+    if (eleccion =="0"){
+        alert("No has seleccionado ninguna calificación")
+    }else
     contenedor.style.display = "flex";
     calificación.innerText = eleccion;
 }
