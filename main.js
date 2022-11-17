@@ -11,10 +11,19 @@ const calificación = document.getElementById("calificacion");
 function eventoclick() {
     if (eleccion =="0"){
         alert("No has seleccionado ninguna calificación")
-    }else
-    contenedor.style.display = "flex";
-    calificación.innerText = eleccion;
+    }else{
+        contenedor.style.display = "flex";
+        calificación.innerText = eleccion;
+    }
 }
+
+document.addEventListener("click", (event) =>{
+    const idElemento = event.target.id;
+
+    if(idElemento != "1" && idElemento != "2" && idElemento !=="3" && idElemento !=="4" && idElemento !=="5") {
+        eleccion = 0;
+    }
+});
 
 number1.addEventListener("click", () => {
     eleccion = 1;
